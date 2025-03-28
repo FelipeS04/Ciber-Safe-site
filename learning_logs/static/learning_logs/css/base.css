@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #303030;
+    color: rgb(255, 255, 255);
+}
+
+
+header {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+header a{
+    color: white; /* Cor do texto */
+    padding: 10px;
+    border: 3px solid #000000; /* Borda vermelha */
+    background: linear-gradient(to right, #ff0000, #0000ff); /* Fundo com gradiente de vermelho para azul */
+    display: inline-block;
+    margin-left: 70px; 
+    text-decoration: none;
+    font-size: 1.4em;
+}
+header h1{
+    background: none;
+}
+
+
+/* Container da barra de pesquisa */
+.barra_pesquisa {
+    width: 100%;
+    max-width: 400px; /* Define um tamanho máximo */
+    margin: 0px 120px; /* Centraliza na tela */
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent; /* A borda precisa ser transparente para o gradiente aparecer */
+    border-image: linear-gradient(to right, #ff0000, #0000ff) 1;
+    border-radius: 25px;
+    padding: 3px;
+    background-color: white;
+}
+
+/* Estilizando o campo de entrada */
+.barra_pesquisa input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+/* Estilizando o botão */
+.barra_pesquisa button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efeito no botão ao passar o mouse */
+.barra_pesquisa button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
+
+
+

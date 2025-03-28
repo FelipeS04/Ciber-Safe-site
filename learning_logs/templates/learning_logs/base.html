@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'learning_logs/css/base.css' %}">
+    {% block extra_css %}{% endblock %}
+    {% block extra_js %}{% endblock %}
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}"><h1>Cyber Safe</h1></a>
+        <div class="barra_pesquisa">
+            <input type="text" placeholder="Digite aqui ... ">
+            <button>🔍</button>
+        </div>
+
+    </header>
+
+    {% block content %}{% endblock content %}
+
+</body>
+</html>
