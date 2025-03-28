@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    {% extends "learning_logs/base.html" %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/index.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/index.js' %}"></script>
+    {% endblock %}
+</head>
+
+
+<body>
+
+    {% block content %}
+
+    <div class="ultima-noticia">
+        <h1></h1>
+        <p></p>
+    </div>
+
+
+    <h1>Últimas Notícias de Cibersegurança</h1>
+    <div class="categorias-container">
+        {% for categoria, noticias in noticias_por_categoria.items %}
+            <div class="categoria">
+                <h2>{{ categoria|capfirst }}</h2>
+                <div class="carousel">
+                    <button class="carousel-button prev">❮</button>
+                    <div class="carousel-items">
+                        {% for noticia in noticias %}
+                            <div class="carousel-item">
+                                <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
+                                <h3>{{ noticia.titulo }}</h3>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-button next">❯</button>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}
+                </div><div class="categorias-container">
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+
+
+
+</body>
+</html>
