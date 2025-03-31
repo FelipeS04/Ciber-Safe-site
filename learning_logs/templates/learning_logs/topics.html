@@ -9,14 +9,8 @@
     {% extends "learning_logs/base.html" %}
 
     {% block content %}
-    <h2>Topicos:</h2>
-        <ul>
-            {% for topic in topics %}
-                <li>{{ topic }}</li>
-            {% empty %}
-                <li>Não há topicos adicionados.</li>
-            {% endfor %}
-        </ul>
+    <h1>Noticias</h1>
+    <h2> {{ noticia.titulo }} </h2>
 
 
 
