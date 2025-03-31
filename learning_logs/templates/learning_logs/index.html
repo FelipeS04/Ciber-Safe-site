@@ -21,14 +21,11 @@
 
 
 <body>
-
     {% block content %}
-
     <div class="ultima-noticia">
         <h1></h1>
         <p></p>
     </div>
-
 
     <h1>Últimas Notícias de Cibersegurança</h1>
     <div class="categorias-container">
@@ -41,7 +38,7 @@
                         {% for noticia in noticias %}
                             <div class="carousel-item">
                                 <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
-                                <h3>{{ noticia.titulo }}</h3>
+                                <buttom><h3>{{ noticia.titulo }}</h3></button>
                             </div>
                         {% endfor %}
                     </div>
