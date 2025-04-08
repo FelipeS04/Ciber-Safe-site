@@ -12,8 +12,5 @@ Esse repositório é destinado a construção de uma aplicação web utilizando 
 
 4. Quando for codar sempre dê um 'git pull' para atualizar o repositório que está na sua máquina;
 
-5. Após codar algo no projeto (alterar/adicionar arquivos):
-    git add .
-    git commit -m "<nomedocommit>"
-    git push origin main
+5. Após codar algo no projeto (alterar/adicionar arquivos): 'git add .' - 'git commit -m "<nomedocommit>"' - 'git push origin main'
   
