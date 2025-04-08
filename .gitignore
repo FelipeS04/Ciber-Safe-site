@@ -1,0 +1,6 @@
+ambiente/
+.ambiente/
+venv/
+.venv/
+env/
+.env/
