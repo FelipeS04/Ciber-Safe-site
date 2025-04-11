@@ -9,17 +9,19 @@
     {% block extra_css %}{% endblock %}
     {% block extra_js %}{% endblock %}
 </head>
+<header>
+    <a class="logo" href="{% url 'index' %}"><h1>Cyber Safe</h1></a>
+    <div class="botao_menu">
+        <a href="">Pagina principal</a><a href="">Serviços</a><a href="">Sobre</a>
+    </div>
+    <div class="barra_pesquisa">
+        <input type="text" placeholder="Digite aqui ... ">
+        <button>🔍</button>
+    </div>
+</header>
 <body>
-    <header>
-        <a href="{% url 'index' %}"><h1>Cyber Safe</h1></a>
-        <div class="barra_pesquisa">
-            <input type="text" placeholder="Digite aqui ... ">
-            <button>🔍</button>
-        </div>
 
-    </header>
-
-    {% block content %}{% endblock content %}
+        {% block content %}{% endblock content %}
 
 </body>
 </html>

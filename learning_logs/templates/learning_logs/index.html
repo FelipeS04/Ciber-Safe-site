@@ -22,33 +22,35 @@
 
 <body>
     {% block content %}
-    <div class="ultima-noticia">
-        <h1></h1>
-        <p></p>
-    </div>
+    <div class="corpo">
+        <h1>Últimas Notícias de Cibersegurança</h1>
+        <div class="ultima-noticia">
+            <h1></h1>
+            <p></p>
+        </div>
 
-    <h1>Últimas Notícias de Cibersegurança</h1>
-    <div class="categorias-container">
-        {% for categoria, noticias in noticias_por_categoria.items %}
-            <div class="categoria">
-                <h2>{{ categoria|capfirst }}</h2>
-                <div class="carousel">
-                    <button class="carousel-button prev">❮</button>
-                    <div class="carousel-items">
-                        {% for noticia in noticias %}
-                            <div class="carousel-item">
-                                <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
-                                <buttom><h3>{{ noticia.titulo }}</h3></button>
-                            </div>
-                        {% endfor %}
+        <div class="categorias-container">
+            {% for categoria, noticias in noticias_por_categoria.items %}
+                <div class="categoria">
+                    <h2>{{ categoria|capfirst }}</h2>
+                    <div class="carousel">
+                        <button class="carousel-button prev">❮</button>
+                        <div class="carousel-items">
+                            {% for noticia in noticias %}
+                                <div class="carousel-item">
+                                    <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}">
+                                    <buttom><h3>{{ noticia.titulo }}</h3></button>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-button next">❯</button>
                     </div>
-                    <button class="carousel-button next">❯</button>
                 </div>
-            </div>
-            {% if forloop.counter|divisibleby:2 %}
-                </div><div class="categorias-container">
-            {% endif %}
-        {% endfor %}
+                {% if forloop.counter|divisibleby:2 %}
+                    </div><div class="categorias-container">
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock content %}
 

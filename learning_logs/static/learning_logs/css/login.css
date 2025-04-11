@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #162340;
+    background-color: #0d0f22;
     color: rgb(255, 255, 255);
 }
 
@@ -10,7 +10,7 @@
 header {
     display: flex;
     align-items: center;
-    padding: 50px;
+    padding: 25px;
     font-size: 1.5em;
     background-color: blueviolet;
 }
@@ -25,15 +25,71 @@ header {
 .text_principal {
     padding: 10px;
     margin-left: 80px;
-    background-color: aqua;
-}
-.text_principal h1{
-    font-size: 4em;
+    background-color: transparent;
+    max-width: 400px; /* opcional, limita a largura */
 }
 
+.text_principal h1 {
+    font-size: 5em;
+    line-height: 1.2; /* melhora o espaçamento vertical */
+    letter-spacing: 0.5px; /* opcional: melhora a leitura */
+    color: white; /* pra combinar com o fundo escuro da imagem */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* ou experimente 'Georgia', ou outra fonte elegante */
+}
+
+
 .janela_login {
-    padding: 10px;
-    margin-right: 80px;
+    padding: 30px;
+    margin-right: 150px;
+    background-color: #0d0f22; /* fundo escuro elegante */
+    border-radius: 15px;
+    box-shadow: 0 0 50px 10px rgba(166, 110, 255, 0.5); /* brilho roxo */
+    width: 400px;
+    height: 400px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Título "Login" */
+.janela_login h2 {
+    margin-bottom: 20px;
+    font-size: 2.7em;
+    font-weight: bold;
     text-align: center;
-    background-color: chocolate;
+}
+
+/* Campos de texto */
+.janela_login input[type="text"],
+.janela_login input[type="password"] {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: aliceblue;
+
+}
+
+/* Botão */
+.janela_login button {
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-left: 116px;
+}
+
+.janela_login button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #a46cff;
 }
