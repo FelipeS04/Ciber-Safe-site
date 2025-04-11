@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from .models import Topic
 from .models import Noticia
-
-
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from rest_framework import viewsets
+from .models import Topic, Entry, Noticia
+from .serializers import TopicSerializer, EntrySerializer, NoticiaSerializer
 
 # Create your views here.
 def index(request):
@@ -25,10 +29,6 @@ def topics(request):
     context = {'topics': topics}
     return render(request, 'learning_logs/topics.html', context)
 
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
-
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -41,5 +41,14 @@ def register(request):
     
     return render(request, 'learning_logs/register.html', {'form': form})
 
+class TopicViewSet(viewsets.ModelViewSet):
+    queryset = Topic.objects.all().order_by('-date_added')
+    serializer_class = TopicSerializer
 
+class EntryViewSet(viewsets.ModelViewSet):
+    queryset = Entry.objects.all().order_by('-date_added')
+    serializer_class = EntrySerializer
 
+class NoticiaViewSet(viewsets.ModelViewSet):
+    queryset = Noticia.objects.all().order_by('-data_publicacao')
+    serializer_class = NoticiaSerializer
