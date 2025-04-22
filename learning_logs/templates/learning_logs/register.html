@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% load static %}
+
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'learning_logs/css/register.css' %}">
 </head>
 <body>
-    {% extends "learning_logs/base.html" %}
-
-    {% block content %}
-      <h2>Cadastro</h2>
-      <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Registrar</button>
-      </form>
-    {% endblock %}
-    
+    <header>
+      <h2>Cyber Safe</h2>
+    </header>
+    <div class="div_1">
+      <div class="text_principal">
+        <h1>Sem <br>segurança, <br>sem <br>privacidade</h1>
+      </div>
+      <div class="janela_login">
+        <h2>Cadastro</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
 </body>
-</html>
+{% endblock %}

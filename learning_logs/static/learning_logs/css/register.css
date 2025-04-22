@@ -45,7 +45,7 @@ header {
     border-radius: 15px;
     box-shadow: 0 0 50px 10px rgba(166, 110, 255, 0.5); /* brilho roxo */
     width: 400px;
-    height: 400px;
+    height: 450px;
     color: white;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -85,7 +85,7 @@ header {
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s ease;
-    margin-left: 110px;
+    margin-left: 105px;
 }
 
 .janela_login button:hover {

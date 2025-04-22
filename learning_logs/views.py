@@ -7,6 +7,7 @@ from django.contrib.auth import login
 from rest_framework import viewsets
 from .models import Topic, Entry, Noticia
 from .serializers import TopicSerializer, EntrySerializer, NoticiaSerializer
+from .forms import FormularioDeRegistro
 
 # Create your views here.
 def index(request):
@@ -31,14 +32,12 @@ def topics(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = FormularioDeRegistro(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)  # Faz login automaticamente após o cadastro
-            return redirect('index')  # Redireciona para a página inicial
+            form.save()
+            return redirect('login')
     else:
-        form = UserCreationForm()
-    
+        form = FormularioDeRegistro()
     return render(request, 'learning_logs/register.html', {'form': form})
 
 class TopicViewSet(viewsets.ModelViewSet):
