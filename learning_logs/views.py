@@ -1,11 +1,9 @@
-from django.shortcuts import render
-from .models import Topic
-from .models import Noticia
 from django.shortcuts import render, redirect
+from .models import Topic, Entry, Noticia
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from rest_framework import viewsets
-from .models import Topic, Entry, Noticia
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .serializers import TopicSerializer, EntrySerializer, NoticiaSerializer
 from .forms import FormularioDeRegistro
 
@@ -43,11 +41,14 @@ def register(request):
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')
     serializer_class = TopicSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 class EntryViewSet(viewsets.ModelViewSet):
     queryset = Entry.objects.all().order_by('-date_added')
     serializer_class = EntrySerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 class NoticiaViewSet(viewsets.ModelViewSet):
     queryset = Noticia.objects.all().order_by('-data_publicacao')
     serializer_class = NoticiaSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
