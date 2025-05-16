@@ -40,7 +40,7 @@ def register(request):
 
 def noticia(request, pk):
     noticia = get_object_or_404(Noticia, pk=pk)
-    return render(request, 'noticia.html', {'noticia': noticia})
+    return render(request, 'learning_logs/noticia.html', {'noticia': noticia})
 
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')

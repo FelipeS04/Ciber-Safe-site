@@ -1,7 +1,5 @@
 
 .corpo {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
     border-radius: 5px;
     margin-top: 3px;
     background-color: #0d0f22;
@@ -14,7 +12,6 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
-
 }
 
 /* Cada categoria ocupa 48% para caber duas lado a lado */
