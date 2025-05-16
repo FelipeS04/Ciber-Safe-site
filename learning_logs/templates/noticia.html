@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    {% extends "learning_logs/base.html" %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/index.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/index.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="corpo">
+        <h1>{{ noticia.titulo }}</h1>
+        <br>
+        <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}" width="500" height="300">
+        <br>
+        <br>
+        <p>{{ noticia.conteudo }}</p>
+    </div>
+{% endblock content %}
+</body>
+</html>

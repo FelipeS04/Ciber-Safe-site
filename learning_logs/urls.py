@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('noticia/<int:pk>/', views.noticia, name='noticia'),
     path('topics', views.topics, name='topics'),
     path('register/', views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='learning_logs/login.html'), name='login'),

@@ -4,11 +4,10 @@
     box-sizing: border-box;
     color: rgb(255, 255, 255);
 }
+
 body {
     background-color: #0d0f22;
 }
-
-
 
 header {
     background-color: #0d0f22;
@@ -39,7 +38,6 @@ a.logo h1{
     background: none;
     color: rgb(180, 49, 255); /* Cor do texto */
 }
-
 
 /* Container da barra de pesquisa */
 .barra_pesquisa {
@@ -79,12 +77,3 @@ a.logo h1{
 .barra_pesquisa button:hover {
     background-color: #555;
 }
-
-
-
-
-
-
-
-
-

@@ -1,13 +1,12 @@
 
 .corpo {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
     border-radius: 5px;
     margin-top: 3px;
     background-color: #0d0f22;
     padding: 20px;
 }
-
-
-
 
 /* Container das categorias - para colocar duas lado a lado */
 .categorias-container {

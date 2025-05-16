@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Topic, Entry, Noticia
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -37,6 +37,10 @@ def register(request):
     else:
         form = FormularioDeRegistro()
     return render(request, 'learning_logs/register.html', {'form': form})
+
+def noticia(request, pk):
+    noticia = get_object_or_404(Noticia, pk=pk)
+    return render(request, 'noticia.html', {'noticia': noticia})
 
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')
