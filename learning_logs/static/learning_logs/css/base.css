@@ -10,23 +10,28 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #0d0f22;
     display: flex;
     align-items: center;
     padding: 20px;
     border-radius: 5px;
-    border-bottom: solid 2px rgb(30, 14, 88);
+    border-bottom: solid 2px rgba(166, 110, 255, 0.5);
+    box-shadow: 0 3px 6px rgba(126, 63, 242, 0.4);
 }
 
 a.logo{
-    color: rgb(94, 0, 148); /* Cor do texto */
+    color: rgba(166, 110, 255, 0.5); /* Cor do texto */
     padding: 10px;
     display: inline-block;
     margin-left: 70px; 
     text-decoration: none;
     font-size: 1.1em;
 }
-.botao_menu a{
+
+.botao_menu a {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
     color: rgb(255, 255, 255); /* Cor do texto */
     padding: 10px;
     margin-left: 1px; 
@@ -34,9 +39,44 @@ a.logo{
     font-size: 1.2em;
 }
 
+.botao_menu a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.botao_menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #7e3ff2, #d266fc);
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+
+.botao_menu a:hover {
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.botao_menu a:hover::after {
+  width: 100%;
+}
+
 a.logo h1{
     background: none;
-    color: rgb(180, 49, 255); /* Cor do texto */
+    color: rgb(255, 255, 255); /* Cor do texto */
+}
+
+a.logo h1:hover {
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Container da barra de pesquisa */
@@ -64,7 +104,7 @@ a.logo h1{
 
 /* Estilizando o botão */
 .barra_pesquisa button {
-    background-color: #333;
+    background-color: #ffffff;
     color: white;
     border: none;
     padding: 10px 13px;
@@ -75,5 +115,5 @@ a.logo h1{
 
 /* Efeito no botão ao passar o mouse */
 .barra_pesquisa button:hover {
-    background-color: #555;
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
 }
