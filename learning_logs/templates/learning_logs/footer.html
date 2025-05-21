@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safe</title>
+    <link rel="stylesheet" href="{% static 'learning_logs/css/footer.css' %}">
+</head>
+<body>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <a href=""><h1>Cyber Safe</h1></a>
+      <br>
+      <br>
+      <p>Protegendo você no mundo digital.</p>
+    </div>
+    <div class="footer-menu">
+      <ul>
+        <a href="{% url 'index' %}">Início</a>
+        <a href="">Serviços</a>
+        <a href="">Sobre</a>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Cyber Safe. Todos os direitos reservados.</p>
+  </div>
+  </footer>
+</body>
+</html>

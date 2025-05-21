@@ -1,0 +1,77 @@
+footer {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #0d0f22;
+  border-radius: 5px;
+  border-top: solid 2px rgba(166, 110, 255, 0.5);
+  box-shadow: 0 -3px 6px rgba(126, 63, 242, 0.4);
+  color: white;
+  padding: 2rem;
+  
+}
+
+.footer-left h1 {
+  font-family: 'Arial, Helvetica, sans-serif';
+  background: none;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.footer-left h1:hover {
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #7e3ff2, #d266fc);
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-menu a:hover {
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-menu a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 12px;
+  color: #ffffff;
+}

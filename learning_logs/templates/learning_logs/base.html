@@ -12,7 +12,7 @@
 <header>
     <a class="logo" href="{% url 'index' %}"><h1>Cyber Safe</h1></a>
     <div class="botao_menu">
-        <a href="">Início</a><a href="">Serviços</a><a href="">Sobre</a>
+        <a href="{% url 'index' %}">Início</a><a href="">Serviços</a><a href="">Sobre</a>
     </div>
     <div class="barra_pesquisa">
         <input type="text" placeholder="Digite aqui ... ">
@@ -21,5 +21,6 @@
 </header>
 <body>
 {% block content %}{% endblock content %}
+{% include "learning_logs/footer.html" %}
 </body>
 </html>
