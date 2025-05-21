@@ -15,10 +15,9 @@ header {
     display: flex;
     align-items: center;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 0px;
     border-bottom: solid 2px rgba(166, 110, 255, 0.5);
     box-shadow: 0 3px 6px rgba(126, 63, 242, 0.4);
-    border-radius: 5px;
 }
 
 a.logo{

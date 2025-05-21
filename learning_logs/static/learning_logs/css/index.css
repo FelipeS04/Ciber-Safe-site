@@ -28,7 +28,7 @@
     box-shadow: 0 0 50px 10px rgba(166, 110, 255, 0.5);
 }
 
-.categoria h2{
+.categoria h2 {
     text-align: center;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -80,7 +80,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to right, #7e3ff2, #d266fc);
     color: white;
     text-align: center;
     font-size: 12px;
