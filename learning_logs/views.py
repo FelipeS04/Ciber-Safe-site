@@ -42,6 +42,9 @@ def noticia(request, pk):
     noticia = get_object_or_404(Noticia, pk=pk)
     return render(request, 'learning_logs/noticia.html', {'noticia': noticia})
 
+def sobre(request):
+    return render(request, 'learning_logs/sobre.html')
+
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')
     serializer_class = TopicSerializer

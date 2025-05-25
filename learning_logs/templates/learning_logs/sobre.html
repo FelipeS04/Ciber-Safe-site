@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    {% extends "learning_logs/base.html" %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/index.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/index.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="corpo">
+        <h1>Sobre a Cyber Safe</h1>
+        <br>
+        <p>O projeto Cyber Safe surge como uma solução acessível, educativa e personalizável, capaz de impactar positivamente indivíduos e organizações, com o intuito de fornecer informações atualizadas e acessíveis sobre segurança cibernética, ajudando usuários, empresas e profissionais da área a se protegerem contra ameaças digitais. Nosso compromisso é compartilhar notícias sobre ataques, vulnerabilidades e boas práticas, promovendo a conscientização e a defesa no mundo digital.</p>
+        <br>
+        <p>Ser a principal referência em segurança cibernética, reconhecido pela credibilidade, clareza e impacto na formação de uma internet mais segura. Buscamos tornar a cyber segurança um conhecimento acessível para todos, criando um espaço confiável para quem deseja se manter informado e protegido contra ameaças digitais.</p>
+        <br>
+        <img src="{% static 'learning_logs/img/logo.png' %}" class="logo-icon" alt="Logo">
+        <br>
+    </div>
+{% endblock content %}
+</body>
+</html>

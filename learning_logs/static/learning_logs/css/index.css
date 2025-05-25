@@ -8,6 +8,12 @@
     padding: 20px;
 }
 
+.logo-icon {
+  display: block;
+  margin: 40px auto 0 auto;
+  width: 70px;  
+}
+
 /* Container das categorias - para colocar duas lado a lado */
 .categorias-container {
     display: flex;

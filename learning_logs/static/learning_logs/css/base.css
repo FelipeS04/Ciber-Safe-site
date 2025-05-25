@@ -21,12 +21,16 @@ header {
 }
 
 a.logo{
-    color: rgba(166, 110, 255, 0.5); /* Cor do texto */
-    padding: 10px;
     display: inline-block;
-    margin-left: 70px; 
-    text-decoration: none;
-    font-size: 1.1em;
+    margin-left: 30px; 
+}
+
+.logo {
+  display: block;
+  margin: 0;        
+  padding: 0;     
+  width: 60px;  
+  height: 50px;  
 }
 
 .botao_menu a {
@@ -34,7 +38,7 @@ a.logo{
     font-weight: bold;
     color: rgb(255, 255, 255); /* Cor do texto */
     padding: 10px;
-    margin-left: 1px; 
+    margin-left: 45px; 
     text-decoration: none;
     font-size: 1.2em;
 }

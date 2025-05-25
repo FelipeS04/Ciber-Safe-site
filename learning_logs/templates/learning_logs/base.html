@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Safe</title>
+    <link rel="icon" href="{% static 'learning_logs/img/icon.png' %}" type="image/png">
     <link rel="stylesheet" href="{% static 'learning_logs/css/base.css' %}">
     {% block extra_css %}{% endblock %}
     {% block extra_js %}{% endblock %}
 </head>
 <header>
-    <a class="logo" href="{% url 'index' %}"><h1>Cyber Safe</h1></a>
+    <a class="logo" href="{% url 'index' %}"><img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo"></a>
     <div class="botao_menu">
-        <a href="{% url 'index' %}">Início</a><a href="">Serviços</a><a href="">Sobre</a>
+        <a href="{% url 'index' %}">Início</a><a href="">Serviços</a><a href="{% url 'sobre' %}">Sobre</a>
     </div>
     <div class="barra_pesquisa">
         <input type="text" placeholder="Digite aqui ... ">
