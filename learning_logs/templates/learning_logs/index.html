@@ -23,6 +23,8 @@
     <div class="corpo">
         <br>
         <h1>Últimas Notícias sobre Segurança Cibernética</h1>
+        <br>
+        <br>
         <div class="ultima-noticia">
             <h1></h1>
             <p></p>
@@ -30,14 +32,16 @@
         <div class="categorias-container">
             {% for categoria, noticias in noticias_por_categoria.items %}
                 <div class="categoria">
+                    <br>
                     <h2>{{ categoria|capfirst }}</h2>
+                    <br>
                     <div class="carousel">
                         <button class="carousel-button prev">❮</button>
                         <div class="carousel-items">
                             {% for noticia in noticias %}
                                 <div class="carousel-item">
                                     <a href="{% url 'noticia' noticia.pk %}"><img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}"></a>
-                                    <buttom><h3>{{ noticia.titulo }}</h3></button>
+                                    <h3>{{ noticia.titulo }}</h3>
                                 </div>
                             {% endfor %}
                         </div>
@@ -50,6 +54,9 @@
             {% endfor %}
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 {% endblock content %}
 </body>
 </html>

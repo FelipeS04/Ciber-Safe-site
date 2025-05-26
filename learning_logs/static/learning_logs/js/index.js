@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".carousel").forEach(carousel => {
         let items = carousel.querySelector(".carousel-items");
@@ -8,29 +5,51 @@ document.addEventListener("DOMContentLoaded", function () {
         let prevButton = carousel.querySelector(".prev");
 
         let index = 0;
-        let itemWidth = items.querySelector(".carousel-item").offsetWidth;
-        let gap = 10; // Ajuste esse valor conforme necessário
+        let gap = 20;
 
-        // Corrigindo cálculo de itens visíveis
-        let totalVisible = Math.floor(carousel.offsetWidth / (itemWidth + gap));
-        let maxIndex = Math.max(0, items.children.length - totalVisible);
- // Último índice válido para rolagem
+        // Função para atualizar o carrossel e o estado dos botões
+        function updateCarousel() {
+            const item = items.querySelector(".carousel-item");
+            if (!item) return;
 
-        // 🔹 Garante que os itens comecem alinhados à esquerda
-        items.style.transform = "translateX(0)";
+            const itemWidth = item.offsetWidth;
+            const carouselWidth = carousel.offsetWidth;
+            const totalVisible = Math.floor(carouselWidth / (itemWidth + gap));
+            const maxIndex = Math.max(0, items.children.length - totalVisible);
 
+            // Corrige o deslocamento
+            items.style.transform = `translateX(-${index * (itemWidth + gap)}px)`;
+
+            // Atualiza o estado dos botões
+            prevButton.disabled = index === 0;  // Desabilita botão "prev" se no início
+            nextButton.disabled = index >= maxIndex;  // Desabilita botão "next" se no final
+
+            return { itemWidth, gap, maxIndex };
+        }
+
+        let dimensions = updateCarousel();
+
+        // Função para avançar no carrossel
         nextButton.addEventListener("click", function () {
-            if (index < maxIndex) {
+            if (index < dimensions.maxIndex) {
                 index++;
-                items.style.transform = `translateX(-${index * (itemWidth + gap)}px)`;
+                items.style.transform = `translateX(-${index * (dimensions.itemWidth + gap)}px)`;
+                updateCarousel();  // Atualiza o estado dos botões após a mudança
             }
         });
 
+        // Função para voltar no carrossel
         prevButton.addEventListener("click", function () {
             if (index > 0) {
                 index--;
-                items.style.transform = `translateX(-${index * (itemWidth + gap)}px)`;
+                items.style.transform = `translateX(-${index * (dimensions.itemWidth + gap)}px)`;
+                updateCarousel();  // Atualiza o estado dos botões após a mudança
             }
+        });
+
+        // Atualiza o carrossel quando a janela for redimensionada
+        window.addEventListener("resize", function () {
+            dimensions = updateCarousel();
         });
     });
 });
