@@ -4,8 +4,8 @@ footer {
   font-size: 14px;
   background-color: #0d0f22;
   border-radius: 0px;
-  border-top: solid 2px rgba(166, 110, 255, 0.5);
-  box-shadow: 0 -3px 6px rgba(126, 63, 242, 0.4);
+  border-top: solid 2px #4c77cc;
+  box-shadow: 0 -3px 6px #ca2faa;
   color: white;
   padding: 2rem;
 }
@@ -19,7 +19,7 @@ footer {
 }
 
 .footer-left h1:hover {
-  background: linear-gradient(to right, #7e3ff2, #d266fc);
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -53,13 +53,13 @@ footer {
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, #7e3ff2, #d266fc);
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
   transition: width 0.3s ease;
   border-radius: 8px;
 }
 
 .footer-menu a:hover {
-    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -76,7 +76,7 @@ footer {
 }
 
 .footer-bottom p {
-  background: linear-gradient(to right, #7e3ff2, #d266fc);
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;

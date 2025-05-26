@@ -31,7 +31,7 @@
     box-sizing: border-box;
     background: #0d0f22;
     border-radius: 10px;
-    box-shadow: 0 0 50px 10px rgba(166, 110, 255, 0.5);
+    box-shadow: 0 0 50px 10px #4c77cc;
 }
 
 .categoria h2 {
@@ -86,7 +86,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
     color: white;
     text-align: center;
     font-size: 12px;
@@ -113,12 +113,12 @@
 
 .carousel-button.prev {
     left: 10px;
-    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
 }
 
 .carousel-button.next {
     right: 10px;
-    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
 }
 
 /* Adicionar responsividade */

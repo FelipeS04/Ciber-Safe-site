@@ -43,7 +43,7 @@ header {
     margin-right: 150px;
     background-color: #0d0f22; /* fundo escuro elegante */
     border-radius: 15px;
-    box-shadow: 0 0 50px 10px rgba(166, 110, 255, 0.5); /* brilho roxo */
+    box-shadow: 0 0 50px 10px #4c77cc; /* brilho roxo */
     width: 400px;
     height: 450px;
     color: white;
@@ -76,7 +76,7 @@ header {
 
 /* Botão */
 .janela_login button {
-    background: linear-gradient(to right, #7e3ff2, #d266fc);
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
     border: none;
     color: white;
     font-size: 20px;
@@ -90,5 +90,5 @@ header {
 
 .janela_login button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #a46cff;
+    box-shadow: 0 0 10px #4c77cc;
 }
