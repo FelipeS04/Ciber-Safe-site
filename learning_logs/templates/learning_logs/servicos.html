@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    {% extends "learning_logs/base.html" %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/index.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/index.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="corpo">
+        <br>
+        <h1>Serviços</h1>
+        {% for servico in servicos %}
+            <br>
+            <br>
+            <h2>{{ servico.nome }}</h2>
+            <br>
+            <p>{{ servico.descricao|linebreaks }}</p>
+            <br>
+            <div class="botao">
+                <button type="submit">Solicitar</button>
+            </div>
+            <br>
+            <br>
+            {% if not forloop.last %}
+                <hr>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endblock content %}
+</body>
+</html>

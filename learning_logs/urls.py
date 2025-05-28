@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('noticia/<int:pk>/', views.noticia, name='noticia'),
     path('sobre/', views.sobre, name='sobre'),
+    path('servicos/', views.servicos, name='servicos'),
     path('topics/', views.topics, name='topics'),
     path('register/', views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='learning_logs/login.html'), name='login'),

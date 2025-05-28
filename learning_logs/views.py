@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Topic, Entry, Noticia
+from .models import Topic, Entry, Noticia, Servico
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from rest_framework import viewsets
@@ -44,6 +44,10 @@ def noticia(request, pk):
 
 def sobre(request):
     return render(request, 'learning_logs/sobre.html')
+
+def servicos(request):
+    servicos = Servico.objects.all()
+    return render(request, 'learning_logs/servicos.html', {'servicos': servicos})
 
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')

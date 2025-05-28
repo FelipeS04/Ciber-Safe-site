@@ -39,3 +39,10 @@ class Noticia(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class Servico(models.Model):
+    nome = models.CharField(max_length=255)
+    descricao = models.TextField()
+
+    def __str__(self):
+        return self.nome
