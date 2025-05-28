@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Safe</title>
+    <link rel="icon" href="{% static 'learning_logs/img/icon.png' %}" type="image/png">
     <link rel="stylesheet" href="{% static 'learning_logs/css/login.css' %}">
 </head>
 <body>
     {% block content %}
     <header>
-      <h2>Cyber Safe</h2>
+      <a href="{% url 'index' %}"><h2>Cyber Safe</h2></a>
     </header>
     <div class="div_1">
       <div class="text_principal">
@@ -23,6 +24,9 @@
           {{ form.as_p }}
           <button type="submit">Entrar</button>
         </form>
+        <br>
+        <br>
+        <p class="conta">Não possui uma conta? <a href="{% url 'register' %}">Criar conta</a></p>
       </div>
     </div>
     <br>

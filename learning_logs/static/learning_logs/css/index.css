@@ -45,6 +45,10 @@ hr {
     box-shadow: 0 0 10px #8b53bb;
 }
 
+.botao a {
+    text-decoration: none;
+}
+
 /* Container das categorias - para colocar duas lado a lado */
 .categorias-container {
     display: flex;
