@@ -24,13 +24,18 @@
         <br>
         <h1>{{ noticia.titulo }}</h1>
         <br>
+        <p class="data">{{ noticia.data_publicacao }}</p>
+        <br>
         <strong><p>{{ noticia.descricao }}</p></strong>
         <br>
+        <div class="botao-ctg">
+            <button type="submit">{{ noticia.categoria|title }}</button>
+        </div>
         <br>
         <br>
         <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}" class="noticia-img" width="500" height="300">
         <br>
-        <p class="data">{{ noticia.data_publicacao }}</p>
+        <p class="desc-img">{{ noticia.descricao_imagem }}</p>
         <br>
         <br>
         <p class="conteudo">{{ noticia.conteudo|safe }}</p>
