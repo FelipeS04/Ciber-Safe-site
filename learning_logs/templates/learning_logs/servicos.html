@@ -5,7 +5,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Cyber Safe</title>
     <link rel="SHORTCUT ICON" href="" type="">
     <meta name="description" content="" />
     <meta name="keywords" content="Cyber Safe, segurança cibernética" />
@@ -28,7 +28,7 @@
             <br>
             <h2>{{ servico.nome }}</h2>
             <br>
-            <p>{{ servico.descricao|linebreaks }}</p>
+            <p>{{ servico.descricao|linebreaksbr }}</p>
             <br>
             <div class="botao">
                 <a href="{% url 'register' %}"><button type="submit">Solicitar</button></a>

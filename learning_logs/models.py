@@ -27,8 +27,12 @@ class Entry(models.Model):
 
 class Noticia(models.Model):
     titulo = models.CharField(max_length=255)
+    descricao = models.TextField(blank=True, null=True)
     imagem = models.ImageField(upload_to='noticias/', blank=True, null=True)
+    imagem2 = models.ImageField(upload_to='noticias/', blank=True, null=True)
     conteudo = models.TextField()
+    conteudo2 = models.TextField(blank=True, null=True)
+    link = models.URLField(null=True, blank=True)
     data_publicacao = models.DateTimeField(auto_now_add=True)
     categoria = models.CharField(max_length=100, choices=[
         ('vulnerabilidades', 'Vulnerabilidades'),

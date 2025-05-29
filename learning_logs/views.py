@@ -40,7 +40,18 @@ def register(request):
 
 def noticia(request, pk):
     noticia = get_object_or_404(Noticia, pk=pk)
-    return render(request, 'learning_logs/noticia.html', {'noticia': noticia})
+    
+    # Filtra notícias da mesma categoria, excluindo a própria notícia atual
+    noticias_mesma_categoria = Noticia.objects.filter(
+        categoria=noticia.categoria
+    ).exclude(pk=pk).order_by('-data_publicacao')
+
+    context = {
+        'noticia': noticia,
+        'noticias_mesma_categoria': noticias_mesma_categoria,
+    }
+
+    return render(request, 'learning_logs/noticia.html', context)
 
 def sobre(request):
     return render(request, 'learning_logs/sobre.html')
