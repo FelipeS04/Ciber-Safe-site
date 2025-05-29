@@ -33,7 +33,7 @@
             {% for categoria, noticias in noticias_por_categoria.items %}
                 <div class="categoria">
                     <br>
-                    <h2>{{ categoria|capfirst }}</h2>
+                    <h2>{{ categoria|title }}</h2>
                     <br>
                     <div class="carousel">
                         <button class="carousel-button prev">❮</button>
@@ -47,6 +47,7 @@
                         </div>
                         <button class="carousel-button next">❯</button>
                     </div>
+                    <br>
                 </div>
                 {% if forloop.counter|divisibleby:2 %}
                     </div><div class="categorias-container">

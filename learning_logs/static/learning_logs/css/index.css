@@ -17,6 +17,8 @@
     margin-top: 3px;
     background-color: #0d0f22;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .corpo-noticia h1, strong {
@@ -26,6 +28,7 @@
 .conteudo {
     margin: 0 auto;
     max-width: 1000px;
+    width: 100%;
     padding: 10px;
 }
 
@@ -100,6 +103,12 @@ hr {
     text-decoration: none;
 }
 
+.sobre {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 10px;
+}
+
 /* Container das categorias - para colocar duas lado a lado */
 .categorias-container {
     display: flex;
@@ -119,6 +128,7 @@ hr {
 
 .categoria h2 {
     text-align: center;
+    text-transform: none;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     padding: 7px;

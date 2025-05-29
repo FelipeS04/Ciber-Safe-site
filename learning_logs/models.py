@@ -38,7 +38,7 @@ class Noticia(models.Model):
         ('vulnerabilidades', 'Vulnerabilidades'),
         ('ameaças', 'Ameaças'),
         ('tendencias', 'Tendências'),
-        ('ciberseguranca', 'Cibersegurança em geral'),
+        ('ciberseguranca', 'Cibersegurança'),
     ])
 
     def __str__(self):
