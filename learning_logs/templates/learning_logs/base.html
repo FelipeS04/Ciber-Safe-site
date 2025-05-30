@@ -19,6 +19,20 @@
         <input type="text" placeholder="Digite aqui ... ">
         <button>🔍</button>
     </div>
+    <div class="header-right">
+    {% if user.is_authenticated %}
+        <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+        <span>{{ user.username }}</span>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Sair</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">
+            <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+        </a>
+    {% endif %}
+    </div>
 </header>
 <body>
 {% block content %}{% endblock content %}
