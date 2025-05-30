@@ -64,6 +64,14 @@ hr {
   border-radius: 4px;
 }
 
+.hr-noticia {
+  border: none;
+  height: 0.5px;
+  background: #8b53bb;
+  margin: 0;
+  border-radius: 4px;
+}
+
 .noticia-img {
     box-shadow: 0 0 12px #8b53bb;
     display: block;
@@ -96,6 +104,10 @@ hr {
 
 .botao a {
     text-decoration: none;
+}
+
+.botao-noticia {
+    height: 60px;
 }
 
 .botao-noticia button {
