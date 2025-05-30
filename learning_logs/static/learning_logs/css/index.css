@@ -106,10 +106,6 @@ hr {
     text-decoration: none;
 }
 
-.botao-noticia {
-    height: 60px;
-}
-
 .botao-noticia button {
     background: linear-gradient(to right, #4c77cc, #ca2faa);
     border: none;

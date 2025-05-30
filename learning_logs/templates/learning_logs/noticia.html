@@ -54,13 +54,17 @@
         <p class="desc-img">{{ noticia.descricao_imagem2 }}</p>
         {% endif %}
         <br>
-        <br>
         {% if noticia.conteudo2 %}
+            <br>
             <p class="conteudo">{{ noticia.conteudo2|safe }}</p>
+            <br>
         {% endif %}
+        <br>
+        <br>
         <div class="botao-noticia">
             <a href="{{ noticia.link }}"><button type="submit">Acessar Fonte</button></a>
         </div>
+        <br>
         <br>
         <br>
         <br>
