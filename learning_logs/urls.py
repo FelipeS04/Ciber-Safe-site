@@ -24,7 +24,7 @@ urlpatterns = [
     path('sobre/', views.sobre, name='sobre'),
     path('servicos/', views.servicos, name='servicos'),
     path('topics/', views.topics, name='topics'),
-    path('register/', views.register, name='register'),
+    path('criar-conta/', views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='learning_logs/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('api/', include('learning_logs.api_urls')),
