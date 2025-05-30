@@ -29,6 +29,7 @@ class Noticia(models.Model):
     titulo = models.CharField(max_length=255)
     descricao = models.TextField(blank=True, null=True)
     descricao_imagem = models.TextField(blank=True, null=True)
+    descricao_imagem2 = models.TextField(blank=True, null=True)
     imagem = models.ImageField(upload_to='noticias/', blank=True, null=True)
     imagem2 = models.ImageField(upload_to='noticias/', blank=True, null=True)
     conteudo = models.TextField()
