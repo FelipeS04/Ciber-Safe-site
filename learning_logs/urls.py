@@ -28,4 +28,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='learning_logs/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('api/', include('learning_logs.api_urls')),
+    path('cursos/', views.cursos, name='cursos'),
+    path('cursos/curso_01/', views.curso_01, name='curso_01'),
 ]

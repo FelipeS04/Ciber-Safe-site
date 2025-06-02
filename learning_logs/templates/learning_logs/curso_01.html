@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso 01 - Cibersegurança</title>
+    <link rel="stylesheet" href="{% static 'learning_logs/css/curso_01.css' %}">
+</head>
+
+<body>
+<header>
+    <a class="logo" href="{% url 'index' %}">
+        <img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo">
+    </a>
+    <div class="botao_menu">
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'servicos' %}">Serviços</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+    </div>
+    <div class="barra_pesquisa">
+        <input type="text" placeholder="Procurar">
+        <button><img src="{% static 'learning_logs/img/search.png' %}"></button>
+    </div>
+    <div class="header-right">
+        {% if user.is_authenticated %}
+            <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+            <span>{{ user.username }}</span>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Sair</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">
+                <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+            </a>
+        {% endif %}
+    </div>
+</header>
+
+<div class="container">
+    <h1>Fundamentos de Cibersegurança</h1>
+    <p class="descricao">Esta introdução apresenta os conceitos básicos sobre segurança cibernética e boas práticas no ambiente digital.</p>
+
+    <div class="topicos">
+        <div class="topico">
+            <h2>1. O que é Cibersegurança?</h2>
+            <p>Cibersegurança (ou segurança cibernética) é a prática de proteger sistemas, redes, dispositivos e dados digitais contra acessos não autorizados, ataques maliciosos, roubo de informações ou danos.
+            Ela abrange um conjunto de técnicas, tecnologias e boas práticas voltadas para garantir a confidencialidade,
+            integridade e disponibilidade das informações.</p>
+
+            <h3>Por que a Cibersegurança é importante?</h3>
+            <p>Com o avanço da transformação digital, praticamente todas as nossas atividades — trabalho, comunicação, finanças, educação — dependem de sistemas conectados à internet. Isso torna indivíduos,
+            empresas e governos alvos de ameaças digitais cada vez mais sofisticadas.</p>
+
+            <h4>Componentes da Cibersegurança:</h4>
+            <ul>
+                <li>Segurança de rede: proteção contra invasões e ataques em redes internas e externas</li>
+                <li>Segurança de aplicações: garante que softwares estejam protegidos contra vulnerabilidades</li>
+                <li>Segurança da informação: assegura que os dados estejam seguros, criptografados e acessados apenas por pessoas autorizadas.</li>
+                <li>Segurança operacional: refere-se às permissões e controles de acesso dentro de uma organização.</li>
+                <li>Recuperação de desastres e continuidade de negócios: estabelece planos para manter ou restaurar operações após um ataque.</li>
+            </ul>
+        </div>
+
+        <div class="topico">
+            <h2>2. Tipos de Ameaças Comuns</h2>
+            <p>Incluem vírus, malware, phishing, ransomware, engenharia social, entre outros. Conhecer essas ameaças é o primeiro passo para evitá-las.</p>
+            <h3> Vírus</h3>
+            <p>São programas maliciosos que se espalham infectando arquivos ou programas. Podem corromper dados, roubar informações ou tornar o sistema inutilizável.</p>
+            <ul>
+                <li>Exemplo: abrir um arquivo de e-mail contaminado que instala o vírus no seu computador.</li>
+            </ul>
+            <h3> Malware</h3>
+            <p>Termo genérico para qualquer software malicioso (inclui vírus, worms, trojans, spyware, etc...).</p>
+            <ul>
+                <li> Objetivo: causar danos, roubar dados ou controlar o dispositivo da vítima sem que ela perceba.</li>
+            </ul>
+
+
+        </div>
+
+        <div class="topico">
+            <h2>3. Boas Práticas de Segurança</h2>
+            <p>Use senhas fortes, mantenha softwares atualizados, ative autenticação de dois fatores e evite clicar em links suspeitos.</p>
+        </div>
+
+        <div class="topico">
+            <h2>4. Firewall e Antivírus</h2>
+            <p>Ferramentas essenciais para proteger seus dispositivos. O firewall filtra o tráfego e o antivírus detecta e remove malwares.</p>
+        </div>
+
+        <div class="topico">
+            <h2>5. Cibersegurança no Dia a Dia</h2>
+            <p>Evite redes Wi-Fi públicas inseguras, desconfie de e-mails desconhecidos e faça backup dos seus dados regularmente.</p>
+        </div>
+    </div>
+
+    <a class="voltar" href="{% url 'cursos' %}">← Voltar para Cursos</a>
+
+
+<div class="container">
+  <div id="quiz"></div>
+</div>
+<script src="{% static 'learning_logs/js/quiz.js' %}"></script>
+
+
+
+
+
+    
+</div>
+
+</body>
+
+</html>

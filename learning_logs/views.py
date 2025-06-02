@@ -74,3 +74,13 @@ class NoticiaViewSet(viewsets.ModelViewSet):
     queryset = Noticia.objects.all().order_by('-data_publicacao')
     serializer_class = NoticiaSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
+
+from . import views
+
+from django.shortcuts import render
+
+def cursos(request):
+    return render(request, 'learning_logs/cursos.html')
+
+def curso_01(request):
+    return render(request, 'learning_logs/curso_01.html')
