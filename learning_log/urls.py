@@ -24,9 +24,6 @@ from learning_logs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('learning_logs.urls')),
-    path('cursos/', views.cursos, name='cursos'),
-
-
 ]
 
 if settings.DEBUG:

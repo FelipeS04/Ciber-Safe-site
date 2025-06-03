@@ -44,7 +44,9 @@
         <hr class="hr-noticia">
         <br>
         <br>
-        <p class="conteudo">{{ noticia.conteudo|safe }}</p>
+        <div class="conteudo">
+            {{ noticia.conteudo|safe }}
+        </div>
         <br>
         {% if noticia.imagem2 %}
           <img src="{{ noticia.imagem2.url }}" alt="{{ noticia.titulo }}" class="noticia-img" width="500" height="300">
@@ -54,10 +56,12 @@
         <p class="desc-img">{{ noticia.descricao_imagem2 }}</p>
         {% endif %}
         <br>
+        <br>
+        <br>
         {% if noticia.conteudo2 %}
-            <br>
-            <p class="conteudo">{{ noticia.conteudo2|safe }}</p>
-            <br>
+            <div class="conteudo">
+                {{ noticia.conteudo2|safe }}
+            </div>
         {% endif %}
         <br>
         <br>
