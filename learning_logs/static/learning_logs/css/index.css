@@ -132,10 +132,57 @@ hr {
     text-decoration: none;
 }
 
+.botao-erro {
+    margin: 100px 0;
+}
+
+.botao-erro button {
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.botao-erro button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #8b53bb;
+}
+
+.botao-erro a {
+    text-decoration: none;
+}
+
 .sobre {
     margin: 0 auto;
     max-width: 1300px;
     padding: 10px;
+}
+
+.erro {
+    margin: 200px 0;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.erro h1 {
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.erro h3 {
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 /* Container das categorias - para colocar duas lado a lado */

@@ -21,24 +21,19 @@
 <body>
     {% block content %}
     <div class="corpo">
+        <div class="erro">
+            <h1>Ops! Não foi possível encontrar<br>esta página :/</h1>
+            <br>
+            <br>
+            <br>
+            <h3>A página que você está procurando não existe ou ocorreu um erro.</h3>
+        </div>
+        <div class="botao-erro">
+            <a href="{% url 'index' %}"><button type="submit">Voltar ao Início</button></a>
+        </div>
         <br>
-        <h1>Serviços</h1>
-        {% for servico in servicos %}
-            <br>
-            <br>
-            <h2>{{ servico.nome }}</h2>
-            <br>
-            <p>{{ servico.descricao|linebreaksbr }}</p>
-            <br>
-            <div class="botao">
-                <a href="{% url 'erro' %}"><button type="submit">Solicitar</button></a>
-            </div>
-            <br>
-            <br>
-            {% if not forloop.last %}
-                <hr>
-            {% endif %}
-        {% endfor %}
+        <br>
+        <br>
     </div>
     {% endblock content %}
 </body>

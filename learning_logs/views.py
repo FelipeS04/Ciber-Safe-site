@@ -60,6 +60,15 @@ def servicos(request):
     servicos = Servico.objects.all()
     return render(request, 'learning_logs/servicos.html', {'servicos': servicos})
 
+def servico(request):
+    return render(request, 'learning_logs/erro.html')
+
+def cursos(request):
+    return render(request, 'learning_logs/cursos.html')
+
+def curso_01(request):
+    return render(request, 'learning_logs/curso_01.html')
+
 class TopicViewSet(viewsets.ModelViewSet):
     queryset = Topic.objects.all().order_by('-date_added')
     serializer_class = TopicSerializer
@@ -74,13 +83,3 @@ class NoticiaViewSet(viewsets.ModelViewSet):
     queryset = Noticia.objects.all().order_by('-data_publicacao')
     serializer_class = NoticiaSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
-
-from . import views
-
-from django.shortcuts import render
-
-def cursos(request):
-    return render(request, 'learning_logs/cursos.html')
-
-def curso_01(request):
-    return render(request, 'learning_logs/curso_01.html')
