@@ -1,7 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head><title>Cursos</title></head>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'learning_logs/css/cursos.css' %}">
 <body>
+
+
+    <header>
+    <a class="logo" href="{% url 'index' %}">
+        <img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo">
+    </a>
+    <div class="botao_menu">
+        <a href="{% url 'index' %}">Início</a>
+        <a href="{% url 'servicos' %}">Serviços</a>
+        <a href="{% url 'sobre' %}">Sobre</a>
+    </div>
+    <div class="barra_pesquisa">
+        <input type="text" placeholder="Procurar">
+        <button><img src="{% static 'learning_logs/img/search.png' %}"></button>
+    </div>
+    <div class="header-right">
+        {% if user.is_authenticated %}
+            <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+            <span>{{ user.username }}</span>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Sair</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">
+                <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
+            </a>
+        {% endif %}
+    </div>
+</header>
+
+
     <h1>Lista de Cursos</h1>
     <ul>
         <li><a href="{% url 'curso_01' %}">Curso 01</a></li>

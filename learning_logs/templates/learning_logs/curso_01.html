@@ -71,29 +71,79 @@
             <ul>
                 <li>Exemplo: abrir um arquivo de e-mail contaminado que instala o vírus no seu computador.</li>
             </ul>
+
             <h3> Malware</h3>
             <p>Termo genérico para qualquer software malicioso (inclui vírus, worms, trojans, spyware, etc...).</p>
             <ul>
                 <li> Objetivo: causar danos, roubar dados ou controlar o dispositivo da vítima sem que ela perceba.</li>
             </ul>
-
-
+            <h3>Phishing</h3>
+            <p>Técnica de ataque que visa enganar usuários, fazendo-os revelar informações sensíveis como senhas, números de cartões ou credenciais.</p>
+            <ul>
+                <li>O atacante envia e-mails ou mensagens fingindo ser uma instituição confiável (banco, serviço de streaming, etc.). Normalmente, incluem links que levam a páginas falsas.</li>
+                <li>Receber um e-mail do "seu banco" pedindo para confirmar sua senha. Ao clicar, você é redirecionado a um site falso onde seus dados são roubados.</li>
+            </ul>
         </div>
 
         <div class="topico">
             <h2>3. Boas Práticas de Segurança</h2>
             <p>Use senhas fortes, mantenha softwares atualizados, ative autenticação de dois fatores e evite clicar em links suspeitos.</p>
+            <h3>O que são senhas fortes?</h3>
+            <p>Senhas que combinam letras (maiúsculas e minúsculas), números e caracteres especiais, dificultando que sejam adivinhadas ou quebradas por ataques automatizados. </p>
+            <ul>
+                <li>Pelo menos 12 caracteres</li>
+                <li>Não utilizar dados pessoais (como nome ou data de nascimento).</li>
+                <li>Uso de caracteres especiais: ! @ # $ % ^ & * ( )</li>
+                <li>Trocar senhas periodicamente.</li>
+            </ul>
         </div>
 
         <div class="topico">
             <h2>4. Firewall e Antivírus</h2>
             <p>Ferramentas essenciais para proteger seus dispositivos. O firewall filtra o tráfego e o antivírus detecta e remove malwares.</p>
+            <h3>Firewall de Rede:</h3>
+            <ul>
+                <li>Atua entre redes (por exemplo, entre a rede interna de uma empresa e a internet).</li>
+                <li>Comum em roteadores e servidores corporativos.</li>
+            </ul>
+            <h3>Firewall Pessoal:</h3>
+            <ul>
+                <li>Instalado em dispositivos individuais (PCs, notebooks).</li>
+                <li>Controla aplicativos e conexões específicas.</li>
+            </ul>
+
+            <h3>Firewall de Próxima Geração (NGFW):</h3>
+            <ul>
+                <li>Integra funções como inspeção profunda de pacotes, prevenção contra intrusões (IPS) e filtragem por aplicação.</li>
+            </ul>
         </div>
 
         <div class="topico">
             <h2>5. Cibersegurança no Dia a Dia</h2>
             <p>Evite redes Wi-Fi públicas inseguras, desconfie de e-mails desconhecidos e faça backup dos seus dados regularmente.</p>
+            <p>A cibersegurança não é importante apenas para grandes empresas ou especialistas em tecnologia  ela é essencial para todos nós, no uso cotidiano de dispositivos, redes e serviços digitais.
+                Pequenas atitudes podem evitar grandes problemas, como roubo de dados,
+                vazamentos de senhas, perdas financeiras e até sequestro de informações pessoais.</p>
+            <h3>Riscos Comuns no Dia a Dia Digital:</h3>
+            <ul>
+                <li>Redes Wi-Fi públicas sem proteção</li>
+                <li>E-mails falsos e mensagens fraudulentas (phishing)</li>
+                <li>Senhas fracas e repetidas</li>
+                <li>Falta de backup dos dados importantes</li>
+            </ul>
+            <h3>Boas Práticas de Cibersegurança Cotidianas:</h3>
+            <p></p>
+            <ul>
+                <li>Evite Redes Wi-Fi Públicas Inseguras.
+                    Redes públicas (como as de cafés, shoppings ou aeroportos) geralmente não são criptografadas,
+                    permitindo que atacantes espiem suas conexões.</li>
+                <li>Riscos: roubo de senhas, interceptação de dados bancários, espionagem de tráfego</li>
+                <li>Dica: Use VPN (rede privada virtual) se for necessário usar essas redes, e nunca acesse bancos ou e-mails importantes nelas.</li>
+            </ul>
+
+
         </div>
+
     </div>
 
     <a class="voltar" href="{% url 'cursos' %}">← Voltar para Cursos</a>
@@ -104,11 +154,6 @@
 </div>
 <script src="{% static 'learning_logs/js/quiz.js' %}"></script>
 
-
-
-
-
-    
 </div>
 
 </body>
