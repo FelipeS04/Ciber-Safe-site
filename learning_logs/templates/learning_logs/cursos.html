@@ -1,7 +1,9 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head><title>Cursos</title></head>
-{% load static %}
+
 
 <link rel="stylesheet" href="{% static 'learning_logs/css/cursos.css' %}">
 <body>
@@ -35,12 +37,19 @@
         {% endif %}
     </div>
 </header>
+<h2>
 
+</h2>
+<h1>Lista de Cursos</h1>
 
-    <h1>Lista de Cursos</h1>
-    <ul>
-        <li><a href="{% url 'curso_01' %}">Curso 01</a></li>
-    </ul>
-    <a href="{% url 'index' %}">Voltar para Home</a>
+<div class="curso">
+    <img src="{% static 'learning_logs/img/rapozo_curso_01.jpeg' %}" alt="Curso 01">
+    <div class="curso-info">
+        <a href="{% url 'curso_01' %}">Curso 01: Introdução à Cibersegurança</a>
+    </div>
+</div>
+
+<a class="voltar" href="{% url 'index' %}">Voltar para o inicio</a>
+
 </body>
 </html>

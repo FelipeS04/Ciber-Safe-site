@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             question: "1. O que é Phishing?",
             options: [
-                "Técnica de pescar dados reais em redes Wi-Fi públicas.",
                 "Ataque que engana o usuário para obter informações sensíveis.",
+                "Técnica de pescar dados reais.",
                 "Malware que se replica automaticamente.",
                 "Firewall mal configurado.",
                 "Tipo de criptografia"

@@ -153,3 +153,63 @@ a.logo h1{
     width: 15px;  
     height: 15px;
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 50px; /* ou ajuste conforme preferir */
+    text-align: center;
+    color: #4d4650bc; /* se estiver usando fundo escuro */
+}
+
+.curso {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.curso:hover {
+    transform: scale(1.02);
+}
+
+.curso img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.curso-info a {
+    font-size: 20px;
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.curso-info a:hover {
+    text-decoration: underline;
+}
+
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
