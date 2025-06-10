@@ -1,8 +1,7 @@
-# accounts/forms.py (ou learning_logs/forms.py, onde estiver seu form)
-
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Comentario
 
 class FormularioDeRegistro(UserCreationForm):
     def __init__(self, *args, **kwargs):
@@ -48,3 +47,11 @@ class FormularioDeRegistro(UserCreationForm):
                 "As senhas não coincidem.", code='password_mismatch'
             )
         return password2
+
+class ComentarioForm(forms.ModelForm):
+    class Meta:
+        model = Comentario
+        fields = ['texto']
+        widgets = {
+            'texto': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Digite seu comentário...'}),
+        }

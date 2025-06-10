@@ -21,6 +21,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('noticia/<int:pk>/', views.noticia, name='noticia'),
+    path('noticia/<int:pk>/comentario/<int:comentario_id>/excluir/', views.excluir_comentario, name='excluir_comentario'),
+    path('noticia/<int:pk>/comentario/<int:comentario_id>/editar/', views.editar_comentario, name='editar_comentario'),
     path('sobre/', views.sobre, name='sobre'),
     path('servicos/', views.servicos, name='servicos'),
     path('servico/', views.servico, name='erro'),

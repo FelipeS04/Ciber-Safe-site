@@ -1,6 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
 class Topic(models.Model):
     """Um assunto sobre o qual o usuário esta aprendendo"""
     text = models.CharField(max_length=200)
@@ -10,7 +10,6 @@ class Topic(models.Model):
         """Devolve uma representação de string do modelo"""
         return self.text
     
-
 class Entry(models.Model):
     """ALgo especifico aprendido sobre um assunto"""
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -24,7 +23,6 @@ class Entry(models.Model):
         """Devolve uma representação em string do modelo"""
         return self.text[:50] + '...' if len(self.text) > 50 else self.text
     
-
 class Noticia(models.Model):
     titulo = models.CharField(max_length=255)
     descricao = models.TextField(blank=True, null=True)
@@ -52,3 +50,13 @@ class Servico(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Comentario(models.Model):
+    noticia = models.ForeignKey('Noticia', on_delete=models.CASCADE, related_name='comentarios')
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
+    texto = models.TextField()
+    criado_em = models.DateTimeField(auto_now_add=True)
+    atualizado_em = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'Comentário de {self.autor} em {self.noticia}'

@@ -76,6 +76,72 @@
         <br>
         <br>
         <br>
+        <h2 id="comentarios" style="margin-bottom: 1rem;">Comentários ({{ comentarios|length }})</h2>
+        {% if user.is_authenticated %}
+            <br>
+            <div class="comentario-form" id="comentario-form">
+                <form method="post" action="#comentario-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <textarea name="texto" placeholder="Adicione um comentário..." rows="3" required>{{ form.texto.value|default_if_none:'' }}</textarea>
+                    </div>
+                    <br>
+                    <button type="submit">Comentar</button>
+                </form>
+                <br>
+            </div>
+        {% else %}
+            <br>
+            <p><a class="login" href="{% url 'login' %}">Faça login</a> para comentar.</p>
+            <br>
+            <br>
+        {% endif %}
+
+        {% if comentarios %}
+            {% for comentario in comentarios %}
+                <div class="comentario" id="comentario-{{ comentario.pk }}">
+                    <div class="comentario-cabecalho">
+                        <div class="comentario-autor">
+                            <img src="{% static 'learning_logs/img/profile.png' %}" class="perfil-comentario" alt="Perfil">
+                            <strong>{{ comentario.autor.username }}</strong>
+                        </div>
+                        <span class="data">{{ comentario.criado_em|date:"d/m/Y H:i" }}</span>
+                    </div>
+
+                    {% if comentario_em_edicao and comentario.id == comentario_em_edicao.id %}
+                        <div class="comentario-form" id="comentario-form">
+                            <form method="post" action="{% url 'editar_comentario' pk=noticia.pk comentario_id=comentario.id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <br>
+                                    <textarea name="texto" rows="3" required>{{ form_edicao.texto.value }}</textarea>
+                                </div>
+                                <br>
+                                <button type="submit">Salvar</button>
+                                <a href="{% url 'noticia' pk=noticia.pk %}"><button type="submit">Cancelar</button></a>
+                            </form>
+                        </div>  
+                    {% else %}
+                        <div class="comentario-texto">
+                            {{ comentario.texto }}
+                        </div>
+                        {% if request.user == comentario.autor %}
+                            <div class="comentario-opcoes">
+                                <a href="{% url 'editar_comentario' pk=noticia.pk comentario_id=comentario.pk %}#comentario-{{ comentario.pk }}">Editar</a> • 
+                                <a href="{% url 'excluir_comentario' pk=noticia.pk comentario_id=comentario.pk %}#comentario-{{ comentario.pk }}">Excluir</a>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <hr class="hr-noticia">
+        <br>
+        <br>
+        <br>
         <div class="categoria">
             <h2>Veja também:</h2>
             <br>
