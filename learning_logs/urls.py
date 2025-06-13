@@ -33,4 +33,5 @@ urlpatterns = [
     path('api/', include('learning_logs.api_urls')),
     path('cursos/', views.cursos, name='cursos'),
     path('cursos/curso_01/', views.curso_01, name='curso_01'),
+    path('cursos/', views.cursos, name='cursos'),
 ]

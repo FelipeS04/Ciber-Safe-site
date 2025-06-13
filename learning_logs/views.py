@@ -156,3 +156,6 @@ def excluir_comentario(request, pk, comentario_id):
         return redirect(f"{reverse('noticia', kwargs={'pk': pk})}#comentarios")
 
     return redirect('noticia', noticia_id=comentario.noticia.id)
+
+def cursos(request):
+    return render(request, 'learning_logs/cursos.html')
