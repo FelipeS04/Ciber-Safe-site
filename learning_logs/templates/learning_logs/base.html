@@ -13,12 +13,7 @@
 <header>
     <a class="logo" href="{% url 'index' %}"><img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo"></a>
     <div class="botao_menu">
-        <a href="{% url 'index' %}">Início</a><a href="{% url 'servicos' %}">Serviços</a><a href="{% url 'sobre' %}">Sobre</a> <a href="{% url 'cursos' %}">Cursos</a>
-        
-    </div>
-    <div class="barra_pesquisa">
-        <input type="text" placeholder="Procurar">
-        <button><img src="{% static 'learning_logs/img/search.png' %}"></button>
+        <a href="{% url 'index' %}">Início</a><a href="{% url 'servicos' %}">Serviços</a><a href="{% url 'cursos' %}">Cursos</a><a href="{% url 'sobre' %}">Sobre</a>
     </div>
     <div class="header-right">
     {% if user.is_authenticated %}
