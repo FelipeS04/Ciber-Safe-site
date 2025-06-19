@@ -4,17 +4,17 @@ footer {
   font-size: 14px;
   background-color: #0d0f22;
   border-radius: 0px;
-  border-top: solid 2px #4c77cc;
-  box-shadow: 0 -3px 6px #ca2faa;
-  color: white;
+  border-top: solid 3px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 -3px 6px rgba(255, 255, 255, 0.03);
   padding: 2rem;
 }
 
 .footer-left h1 {
   font-family: 'Arial, Helvetica, sans-serif';
-  background: none;
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: inline-block;
-  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -22,6 +22,13 @@ footer {
   background: linear-gradient(to right, #4c77cc, #ca2faa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.footer-left p {
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .footer-container {
@@ -37,12 +44,14 @@ footer {
 }
 
 .footer-menu a {
-  color: rgb(255, 255, 255);
   margin: 10px;
   text-decoration: none;
   list-style: none;
   padding: 0;
   position: relative;
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
@@ -59,9 +68,9 @@ footer {
 }
 
 .footer-menu a:hover {
-    background: linear-gradient(to right, #4c77cc, #ca2faa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer-menu a:hover::after {

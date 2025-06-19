@@ -1,162 +1,160 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+    {% extends "learning_logs/base.html" %}
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Curso 01 - Cibersegurança</title>
-    <link rel="stylesheet" href="{% static 'learning_logs/css/curso_01.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safe</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/curso_01.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/quiz.js' %}"></script>
+    {% endblock %}
 </head>
-
 <body>
-<header>
-    <a class="logo" href="{% url 'index' %}">
-        <img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo">
-    </a>
-    <div class="botao_menu">
-        <a href="{% url 'index' %}">Início</a>
-        <a href="{% url 'servicos' %}">Serviços</a>
-        <a href="{% url 'sobre' %}">Sobre</a>
-        <a href="{% url 'cursos' %}">Cursos</a>
+    {% block content %}
+    <div class="container">
+        <h1>Fundamentos de Cibersegurança</h1>
+        <hr>
+        <br>
+        <br>
+        <p class="descricao">Esta introdução apresenta os conceitos básicos sobre segurança cibernética e boas práticas no ambiente digital.</p>
+        <div class="topicos">
+            <div class="topico">
+                <h2>1. O que é Cibersegurança?</h2>
+                <br>
+                <br>
+                <p>Cibersegurança (ou segurança cibernética) é a prática de proteger sistemas, redes, dispositivos e dados digitais contra acessos não autorizados, ataques maliciosos, roubo de informações ou danos. Ela abrange um conjunto de técnicas, tecnologias e boas práticas voltadas para garantir a confidencialidade, integridade e disponibilidade das informações.</p>
+                <h3>Por que a Cibersegurança é importante?</h3>
+                <br>
+                <br>
+                <p>Com o avanço da transformação digital, praticamente todas as nossas atividades — trabalho, comunicação, finanças, educação — dependem de sistemas conectados à internet. Isso torna indivíduos, empresas e governos alvos de ameaças digitais cada vez mais sofisticadas.</p>
+                <h4>Componentes da Cibersegurança:</h4>
+                <br>
+                <br>
+                <ul>
+                    <li>Segurança de rede: proteção contra invasões e ataques em redes internas e externas</li>
+                    <li>Segurança de aplicações: garante que softwares estejam protegidos contra vulnerabilidades</li>
+                    <li>Segurança da informação: assegura que os dados estejam seguros, criptografados e acessados apenas por pessoas autorizadas.</li>
+                    <li>Segurança operacional: refere-se às permissões e controles de acesso dentro de uma organização.</li>
+                    <li>Recuperação de desastres e continuidade de negócios: estabelece planos para manter ou restaurar operações após um ataque.</li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>2. Tipos de Ameaças Comuns</h2>
+                <br>
+                <br>
+                <p>Incluem vírus, malware, phishing, ransomware, engenharia social, entre outros. Conhecer essas ameaças é o primeiro passo para evitá-las.</p>
+                <br>
+                <h3> Vírus</h3>
+                <br>
+                <br>
+                <p>São programas maliciosos que se espalham infectando arquivos ou programas. Podem corromper dados, roubar informações ou tornar o sistema inutilizável.</p>
+                <ul>
+                    <li>Exemplo: abrir um arquivo de e-mail contaminado que instala o vírus no seu computador.</li>
+                </ul>
+                <br>
+                <h3> Malware</h3>
+                <br>
+                <br>
+                <p>Termo genérico para qualquer software malicioso (inclui vírus, worms, trojans, spyware, etc...).</p>
+                <ul>
+                    <li> Objetivo: causar danos, roubar dados ou controlar o dispositivo da vítima sem que ela perceba.</li>
+                </ul>
+                <br>
+                <h3>Phishing</h3>
+                <br>
+                <br>
+                <p>Técnica de ataque que visa enganar usuários, fazendo-os revelar informações sensíveis como senhas, números de cartões ou credenciais.</p>
+                <ul>
+                    <li>O atacante envia e-mails ou mensagens fingindo ser uma instituição confiável (banco, serviço de streaming, etc.). Normalmente, incluem links que levam a páginas falsas.</li>
+                    <li>Receber um e-mail do "seu banco" pedindo para confirmar sua senha. Ao clicar, você é redirecionado a um site falso onde seus dados são roubados.</li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>3. Boas Práticas de Segurança</h2>
+                <br>
+                <br>
+                <p>Use senhas fortes, mantenha softwares atualizados, ative autenticação de dois fatores e evite clicar em links suspeitos.</p>
+                <h3>O que são senhas fortes?</h3>
+                <br>
+                <br>
+                <p>Senhas que combinam letras (maiúsculas e minúsculas), números e caracteres especiais, dificultando que sejam adivinhadas ou quebradas por ataques automatizados.</p>
+                <br>
+                <ul>
+                    <li>Pelo menos 12 caracteres</li>
+                    <li>Não utilizar dados pessoais (como nome ou data de nascimento).</li>
+                    <li>Uso de caracteres especiais: ! @ # $ % ^ & * ( )</li>
+                    <li>Trocar senhas periodicamente.</li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>4. Firewall e Antivírus</h2>
+                <br>
+                <br>
+                <p>Ferramentas essenciais para proteger seus dispositivos. O firewall filtra o tráfego e o antivírus detecta e remove malwares.</p>
+                <br>
+                <h3>Firewall de Rede:</h3>
+                <br>
+                <br>
+                <ul>
+                    <li>Atua entre redes (por exemplo, entre a rede interna de uma empresa e a internet).</li>
+                    <li>Comum em roteadores e servidores corporativos.</li>
+                </ul>
+                <br>
+                <h3>Firewall Pessoal:</h3>
+                <br>
+                <br>
+                <ul>
+                    <li>Instalado em dispositivos individuais (PCs, notebooks).</li>
+                    <li>Controla aplicativos e conexões específicas.</li>
+                </ul>
+                <br>
+                <h3>Firewall de Próxima Geração (NGFW):</h3>
+                <br>
+                <br>
+                <ul>
+                    <li>Integra funções como inspeção profunda de pacotes, prevenção contra intrusões (IPS) e filtragem por aplicação.</li>
+                </ul>
+            </div>
+            <div class="topico">
+                <h2>5. Cibersegurança no Dia a Dia</h2>
+                <br>
+                <br>
+                <p>Evite redes Wi-Fi públicas inseguras, desconfie de e-mails desconhecidos e faça backup dos seus dados regularmente.</p>
+                <p>A cibersegurança não é importante apenas para grandes empresas ou especialistas em tecnologia  ela é essencial para todos nós, no uso cotidiano de dispositivos, redes e serviços digitais. Pequenas atitudes podem evitar grandes problemas, como roubo de dados, vazamentos de senhas, perdas financeiras e até sequestro de informações pessoais.</p>
+                <br>
+                <h3>Riscos Comuns no Dia a Dia Digital:</h3>
+                <br>
+                <br>
+                <ul>
+                    <li>Redes Wi-Fi públicas sem proteção</li>
+                    <li>E-mails falsos e mensagens fraudulentas (phishing)</li>
+                    <li>Senhas fracas e repetidas</li>
+                    <li>Falta de backup dos dados importantes</li>
+                </ul>
+                <br>
+                <h3>Boas Práticas de Cibersegurança Cotidianas:</h3>
+                <br>
+                <br>
+                <p></p>
+                <ul>
+                    <li>Evite Redes Wi-Fi Públicas Inseguras. Redes públicas (como as de cafés, shoppings ou aeroportos) geralmente não são criptografadas, permitindo que atacantes espiem suas conexões.</li>
+                    <li>Riscos: roubo de senhas, interceptação de dados bancários, espionagem de tráfego</li>
+                    <li>Dica: Use VPN (rede privada virtual) se for necessário usar essas redes, e nunca acesse bancos ou e-mails importantes nelas.</li>
+                </ul>
+            </div>
+        </div>
+        <a class="voltar" href="{% url 'cursos' %}">← Voltar para Cursos</a>
+        <div id="quiz"></div>
     </div>
-    <div class="barra_pesquisa">
-        <input type="text" placeholder="Procurar">
-        <button><img src="{% static 'learning_logs/img/search.png' %}"></button>
-    </div>
-    <div class="header-right">
-        {% if user.is_authenticated %}
-            <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
-            <span>{{ user.username }}</span>
-            <form action="{% url 'logout' %}" method="post">
-                {% csrf_token %}
-                <button type="submit">Sair</button>
-            </form>
-        {% else %}
-            <a href="{% url 'login' %}">
-                <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
-            </a>
-        {% endif %}
-    </div>
-</header>
-
-<div class="container">
-    <h1>Fundamentos de Cibersegurança</h1>
-    <p class="descricao">Esta introdução apresenta os conceitos básicos sobre segurança cibernética e boas práticas no ambiente digital.</p>
-
-    <div class="topicos">
-        <div class="topico">
-            <h2>1. O que é Cibersegurança?</h2>
-            <p>Cibersegurança (ou segurança cibernética) é a prática de proteger sistemas, redes, dispositivos e dados digitais contra acessos não autorizados, ataques maliciosos, roubo de informações ou danos.
-            Ela abrange um conjunto de técnicas, tecnologias e boas práticas voltadas para garantir a confidencialidade,
-            integridade e disponibilidade das informações.</p>
-
-            <h3>Por que a Cibersegurança é importante?</h3>
-            <p>Com o avanço da transformação digital, praticamente todas as nossas atividades — trabalho, comunicação, finanças, educação — dependem de sistemas conectados à internet. Isso torna indivíduos,
-            empresas e governos alvos de ameaças digitais cada vez mais sofisticadas.</p>
-
-            <h4>Componentes da Cibersegurança:</h4>
-            <ul>
-                <li>Segurança de rede: proteção contra invasões e ataques em redes internas e externas</li>
-                <li>Segurança de aplicações: garante que softwares estejam protegidos contra vulnerabilidades</li>
-                <li>Segurança da informação: assegura que os dados estejam seguros, criptografados e acessados apenas por pessoas autorizadas.</li>
-                <li>Segurança operacional: refere-se às permissões e controles de acesso dentro de uma organização.</li>
-                <li>Recuperação de desastres e continuidade de negócios: estabelece planos para manter ou restaurar operações após um ataque.</li>
-            </ul>
-        </div>
-
-        <div class="topico">
-            <h2>2. Tipos de Ameaças Comuns</h2>
-            <p>Incluem vírus, malware, phishing, ransomware, engenharia social, entre outros. Conhecer essas ameaças é o primeiro passo para evitá-las.</p>
-            <h3> Vírus</h3>
-            <p>São programas maliciosos que se espalham infectando arquivos ou programas. Podem corromper dados, roubar informações ou tornar o sistema inutilizável.</p>
-            <ul>
-                <li>Exemplo: abrir um arquivo de e-mail contaminado que instala o vírus no seu computador.</li>
-            </ul>
-
-            <h3> Malware</h3>
-            <p>Termo genérico para qualquer software malicioso (inclui vírus, worms, trojans, spyware, etc...).</p>
-            <ul>
-                <li> Objetivo: causar danos, roubar dados ou controlar o dispositivo da vítima sem que ela perceba.</li>
-            </ul>
-            <h3>Phishing</h3>
-            <p>Técnica de ataque que visa enganar usuários, fazendo-os revelar informações sensíveis como senhas, números de cartões ou credenciais.</p>
-            <ul>
-                <li>O atacante envia e-mails ou mensagens fingindo ser uma instituição confiável (banco, serviço de streaming, etc.). Normalmente, incluem links que levam a páginas falsas.</li>
-                <li>Receber um e-mail do "seu banco" pedindo para confirmar sua senha. Ao clicar, você é redirecionado a um site falso onde seus dados são roubados.</li>
-            </ul>
-        </div>
-
-        <div class="topico">
-            <h2>3. Boas Práticas de Segurança</h2>
-            <p>Use senhas fortes, mantenha softwares atualizados, ative autenticação de dois fatores e evite clicar em links suspeitos.</p>
-            <h3>O que são senhas fortes?</h3>
-            <p>Senhas que combinam letras (maiúsculas e minúsculas), números e caracteres especiais, dificultando que sejam adivinhadas ou quebradas por ataques automatizados. </p>
-            <ul>
-                <li>Pelo menos 12 caracteres</li>
-                <li>Não utilizar dados pessoais (como nome ou data de nascimento).</li>
-                <li>Uso de caracteres especiais: ! @ # $ % ^ & * ( )</li>
-                <li>Trocar senhas periodicamente.</li>
-            </ul>
-        </div>
-
-        <div class="topico">
-            <h2>4. Firewall e Antivírus</h2>
-            <p>Ferramentas essenciais para proteger seus dispositivos. O firewall filtra o tráfego e o antivírus detecta e remove malwares.</p>
-            <h3>Firewall de Rede:</h3>
-            <ul>
-                <li>Atua entre redes (por exemplo, entre a rede interna de uma empresa e a internet).</li>
-                <li>Comum em roteadores e servidores corporativos.</li>
-            </ul>
-            <h3>Firewall Pessoal:</h3>
-            <ul>
-                <li>Instalado em dispositivos individuais (PCs, notebooks).</li>
-                <li>Controla aplicativos e conexões específicas.</li>
-            </ul>
-
-            <h3>Firewall de Próxima Geração (NGFW):</h3>
-            <ul>
-                <li>Integra funções como inspeção profunda de pacotes, prevenção contra intrusões (IPS) e filtragem por aplicação.</li>
-            </ul>
-        </div>
-
-        <div class="topico">
-            <h2>5. Cibersegurança no Dia a Dia</h2>
-            <p>Evite redes Wi-Fi públicas inseguras, desconfie de e-mails desconhecidos e faça backup dos seus dados regularmente.</p>
-            <p>A cibersegurança não é importante apenas para grandes empresas ou especialistas em tecnologia  ela é essencial para todos nós, no uso cotidiano de dispositivos, redes e serviços digitais.
-                Pequenas atitudes podem evitar grandes problemas, como roubo de dados,
-                vazamentos de senhas, perdas financeiras e até sequestro de informações pessoais.</p>
-            <h3>Riscos Comuns no Dia a Dia Digital:</h3>
-            <ul>
-                <li>Redes Wi-Fi públicas sem proteção</li>
-                <li>E-mails falsos e mensagens fraudulentas (phishing)</li>
-                <li>Senhas fracas e repetidas</li>
-                <li>Falta de backup dos dados importantes</li>
-            </ul>
-            <h3>Boas Práticas de Cibersegurança Cotidianas:</h3>
-            <p></p>
-            <ul>
-                <li>Evite Redes Wi-Fi Públicas Inseguras.
-                    Redes públicas (como as de cafés, shoppings ou aeroportos) geralmente não são criptografadas,
-                    permitindo que atacantes espiem suas conexões.</li>
-                <li>Riscos: roubo de senhas, interceptação de dados bancários, espionagem de tráfego</li>
-                <li>Dica: Use VPN (rede privada virtual) se for necessário usar essas redes, e nunca acesse bancos ou e-mails importantes nelas.</li>
-            </ul>
-
-
-        </div>
-
-    </div>
-
-    <a class="voltar" href="{% url 'cursos' %}">← Voltar para Cursos</a>
-
-
-<div class="container">
-  <div id="quiz"></div>
-</div>
-<script src="{% static 'learning_logs/js/quiz.js' %}"></script>
-
-</div>
-
+{% endblock content %}
 </body>
-
 </html>

@@ -1,34 +1,30 @@
-/* Variáveis de cor */
-:root {
-    --roxo-escuro: #3e0f64;
-    --azul-escuro: #0a1f44;
-    --texto-claro: #f0f0f0;
-    --detalhe-azul: #1e3a8a;
-    --hover: #292c6d;
-}
-
-/* Reset básico */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--azul-escuro);
+    background-color: #0d0f22;
     color: var(--texto-claro);
 }
 
 /* Container principal */
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 /* Título principal */
-h1 {
+.container h1 {
     color: white;
     font-size: 2em;
-    border-bottom: 2px solid var(--detalhe-azul);
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #4c77cc, #ca2faa);  margin: 0;
+  border-radius: 4px;
 }
 
 /* Descrição do curso */
@@ -47,14 +43,20 @@ h1 {
 
 /* Cada seção de tópico */
 .topico h2 {
-    color: #b9b9ff;
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .topico h3,
 .topico h4 {
-    color: #ddd;
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
     font-size: 1.1em;
     margin-top: 15px;
 }
@@ -81,180 +83,27 @@ a.voltar {
     display: inline-block;
     margin-top: 40px;
     text-decoration: none;
-    background-color: var(--detalhe-azul);
+    background: linear-gradient(90deg, #4c77cc, #ca2faa);
     color: white;
     padding: 10px 15px;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: 0.3s ease;
 }
 
 a.voltar:hover {
-    background-color: var(--hover);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #8b53bb;
 }
 
 body {
     background-color: #0d0f22;
 }
 
-header {
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    background-color: #0d0f22;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 0px;
-    border-bottom: solid 2px #4c77cc;
-    box-shadow: 0 3px 6px #ca2faa;
-}
-
-.header-right {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-right button {
-    background: linear-gradient(to right, #4c77cc, #ca2faa);
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    display: block;
-    margin: 0 auto;
-    margin-left: 15px;
-}
-
-.header-right button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #8b53bb;
-}
-
-.profile-pic {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease;  
-}
-
-a.logo{
-    display: inline-block;
-    margin-left: 30px; 
-}
-
-.logo {
-  display: block;
-  margin: 0;        
-  padding: 0;     
-  width: 60px;  
-  height: 50px;  
-}
-
-.botao_menu a {
-    font-weight: bold;
-    color: rgb(255, 255, 255); /* Cor do texto */
-    padding: 10px;
-    margin-left: 45px; 
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.botao_menu a {
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
-
-.botao_menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  transition: width 0.3s ease;
-  border-radius: 8px;
-}
-
-.botao_menu a:hover {
-    background: linear-gradient(to right, #4c77cc, #ca2faa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.botao_menu a:hover::after {
-  width: 100%;
-}
-
-a.logo h1{
-    background: none;
-    color: rgb(255, 255, 255); /* Cor do texto */
-}
-
-/* Container da barra de pesquisa */
-.barra_pesquisa {
-    width: 100%;
-    max-width: 400px; /* Define um tamanho máximo */
-    margin: 0px 0px 0 80px; /* Centraliza na tela */
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    padding: 3px;
-    background-color: white;
-}
-
-/* Estilizando o campo de entrada */
-.barra_pesquisa input {
-    color: black;
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 25px;
-}
-
-/* Estilizando o botão */
-.barra_pesquisa button {
-    background-color: #ffffff;
-    color: white;
-    border: none;
-    padding: 10px 13px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.barra_pesquisa img {
-    display: block;
-    margin: 0;        
-    padding: 0;     
-    width: 15px;  
-    height: 15px;
-}
-
-
-/* */
 #quiz {
-    max-width: 700px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #1a1a2e;
+    background-color:rgba(255, 255, 255, 0.03);
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -270,7 +119,10 @@ a.logo h1{
 .quiz-question h3 {
     margin-bottom: 10px;
     font-size: 1.2em;
-    color: #9eeaf9;
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .quiz-option {
@@ -282,21 +134,23 @@ a.logo h1{
 .quiz-submit {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #00adb5;
+    background: linear-gradient(90deg, #4c77cc, #ca2faa);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1em;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .quiz-submit:hover {
-    background-color: #008893;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #8b53bb;
 }
 
 .quiz-results {
+    text-align: center;
     padding-top: 20px;
-    background-color: #121220;
     border-radius: 10px;
 }
 
@@ -307,6 +161,9 @@ a.logo h1{
 
 .quiz-results h3 {
     font-size: 1.3em;
-    color: #9ef;
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
     text-align: center;
 }

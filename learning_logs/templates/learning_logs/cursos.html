@@ -1,55 +1,37 @@
-{% load static %}
-
 <!DOCTYPE html>
-<html>
-<head><title>Cursos</title></head>
-
-
-<link rel="stylesheet" href="{% static 'learning_logs/css/cursos.css' %}">
+<html lang="pt-BR">
+    {% extends "learning_logs/base.html" %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safe</title>
+    <link rel="SHORTCUT ICON" href="" type="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cyber Safe, segurança cibernética" />
+    <meta name="author" content="Felipe Alves Soares" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    {% block extra_css %}
+        <link rel="stylesheet" href="{% static 'learning_logs/css/cursos.css' %}">
+    {% endblock %}
+    {% block extra_js %}
+        <script src="{% static 'learning_logs/js/index.js' %}"></script>
+    {% endblock %}
+</head>
 <body>
-
-
-    <header>
-    <a class="logo" href="{% url 'index' %}">
-        <img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo">
-    </a>
-    <div class="botao_menu">
-        <a href="{% url 'index' %}">Início</a>
-        <a href="{% url 'servicos' %}">Serviços</a>
-        <a href="{% url 'sobre' %}">Sobre</a>
+    {% block content %}
+    <h1 class="cursos-h1">Lista de Cursos</h1>
+    <br>
+    <br>
+    <div class="curso">
+        <img src="{% static 'learning_logs/img/rapozo_curso_01.jpeg' %}" alt="Curso 01">
+        <div class="curso-info">
+            <a href="{% url 'curso_01' %}">Curso 01: Introdução à Cibersegurança</a>
+        </div>
     </div>
-    <div class="barra_pesquisa">
-        <input type="text" placeholder="Procurar">
-        <button><img src="{% static 'learning_logs/img/search.png' %}"></button>
+    <div class="botao-voltar">
+        <a href="{% url 'index' %}"><button type="submit">Voltar ao Início</button></a>
     </div>
-    <div class="header-right">
-        {% if user.is_authenticated %}
-            <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
-            <span>{{ user.username }}</span>
-            <form action="{% url 'logout' %}" method="post">
-                {% csrf_token %}
-                <button type="submit">Sair</button>
-            </form>
-        {% else %}
-            <a href="{% url 'login' %}">
-                <img src="{% static 'learning_logs/img/profile.png' %}" alt="Perfil" class="profile-pic">
-            </a>
-        {% endif %}
-    </div>
-</header>
-<h2>
-
-</h2>
-<h1>Lista de Cursos</h1>
-
-<div class="curso">
-    <img src="{% static 'learning_logs/img/rapozo_curso_01.jpeg' %}" alt="Curso 01">
-    <div class="curso-info">
-        <a href="{% url 'curso_01' %}">Curso 01: Introdução à Cibersegurança</a>
-    </div>
-</div>
-
-<a class="voltar" href="{% url 'index' %}">Voltar para o inicio</a>
-
+    {% endblock content %}
 </body>
 </html>

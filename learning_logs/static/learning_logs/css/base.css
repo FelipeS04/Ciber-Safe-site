@@ -17,8 +17,8 @@ header {
     align-items: center;
     padding: 20px;
     border-radius: 0px;
-    border-bottom: solid 2px #4c77cc;
-    box-shadow: 0 3px 6px #ca2faa;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.03);
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.03);
 }
 
 .header-right {
@@ -37,6 +37,7 @@ header {
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
     font-weight: bold;
     display: block;
     margin: 0 auto;
@@ -80,8 +81,10 @@ a.logo{
 
 .botao_menu a {
   position: relative;
+  background: linear-gradient(to right, #4c77cc, #ca2faa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: inline-block;
-  color: white;
   text-decoration: none;
 }
 
