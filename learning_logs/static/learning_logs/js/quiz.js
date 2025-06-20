@@ -107,15 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (selected) {
                     if (parseInt(selected.value) === correct) {
                         score++;
-                        selected.parentElement.style.color = "#8b53bb";
+                        selected.parentElement.style.color = "#0f0";
                     } else {
-                        selected.parentElement.style.color = "#8b53bb";
+                        selected.parentElement.style.color = "#f00";
                         const correctLabel = questionDiv.querySelectorAll("label")[correct];
-                        correctLabel.style.color = "#8b53bb";
+                        correctLabel.style.color = "#0f0";
                     }
                 } else {
                     const correctLabel = questionDiv.querySelectorAll("label")[correct];
-                    correctLabel.style.color = "#8b53bb";
+                    correctLabel.style.color = "#0f0";
                 }
             });
 
