@@ -60,14 +60,6 @@
 
 hr {
   border: none;
-  height: 2px;
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  margin: 0;
-  border-radius: 4px;
-}
-
-.hr-noticia {
-  border: none;
   height: 0.5px;
   background: linear-gradient(to right, #4c77cc, #ca2faa);
   margin: 0;

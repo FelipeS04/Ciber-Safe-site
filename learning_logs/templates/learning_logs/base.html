@@ -10,6 +10,7 @@
     {% block extra_css %}{% endblock %}
     {% block extra_js %}{% endblock %}
 </head>
+<body>
 <header>
     <a class="logo" href="{% url 'index' %}"><img src="{% static 'learning_logs/img/logo.png' %}" class="logo" alt="Logo"></a>
     <div class="botao_menu">
@@ -30,7 +31,6 @@
     {% endif %}
     </div>
 </header>
-<body>
 {% block content %}{% endblock content %}
 {% include "learning_logs/footer.html" %}
 </body>

@@ -17,8 +17,16 @@ header {
     align-items: center;
     padding: 20px;
     border-radius: 0px;
-    border-bottom: solid 3px rgba(255, 255, 255, 0.03);
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.03);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.5px; 
+    width: 100%;
+    background: linear-gradient(to right, #4c77cc, #ca2faa);
 }
 
 .header-right {
@@ -71,20 +79,13 @@ a.logo{
 }
 
 .botao_menu a {
-    font-weight: bold;
-    color: rgb(255, 255, 255); /* Cor do texto */
-    padding: 10px;
-    margin-left: 45px; 
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.botao_menu a {
+  font-weight: bold;
+  color: #4c77cc;
+  padding: 10px;
+  margin-left: 45px; 
+  text-decoration: none;
+  font-size: 1.2em;
   position: relative;
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
   text-decoration: none;
 }
 

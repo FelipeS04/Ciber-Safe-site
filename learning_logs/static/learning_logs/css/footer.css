@@ -4,16 +4,15 @@ footer {
   font-size: 14px;
   background-color: #0d0f22;
   border-radius: 0px;
-  border-top: solid 3px rgba(255, 255, 255, 0.03);
-  box-shadow: 0 -3px 6px rgba(255, 255, 255, 0.03);
+  border-top: 0.5px solid transparent;
+  border-image: linear-gradient(to right, #4c77cc, #ca2faa) 1;
   padding: 2rem;
+  position: relative;
 }
 
 .footer-left h1 {
+  color: #4c77cc;
   font-family: 'Arial, Helvetica, sans-serif';
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline-block;
   text-decoration: none;
 }
@@ -25,10 +24,7 @@ footer {
 }
 
 .footer-left p {
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  color: #4c77cc;
 }
 
 .footer-container {
@@ -44,14 +40,12 @@ footer {
 }
 
 .footer-menu a {
+  color: #ca2faa;
   margin: 10px;
   text-decoration: none;
   list-style: none;
   padding: 0;
   position: relative;
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
@@ -85,8 +79,5 @@ footer {
 }
 
 .footer-bottom p {
-  background: linear-gradient(to right, #4c77cc, #ca2faa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  color: #8b53bb;
 }
